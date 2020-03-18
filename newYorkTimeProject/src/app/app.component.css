@@ -1,0 +1,228 @@
+/*HEADER*/
+.header{
+    background-color: black;
+    padding: 20px;
+}
+
+.header h2{
+    color: white;
+    margin: 0;
+}
+
+.header span{
+    color: white;
+    padding-left: -1px;
+    font-size: small;
+}
+
+/*BODY*/
+.news-feed{
+    background-color: lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.news-feed .row {
+    margin-bottom: 20px;
+    border-left: 0;
+    border-right: 0;
+    border-top-style: none;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.67);
+    -moz-box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.67);
+    box-shadow: 7px 7px 19px -5px rgba(0,0,0,0.67);
+}
+
+@media screen and (max-width: 1360px) {
+    .news-feed .information {
+        padding-left: 5%!important;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .news-feed .information {
+        padding-left: 7%!important;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .news-feed .information {
+        padding-left: 10%!important;
+    }
+}
+
+@media screen and (max-width: 905px) {
+    .news-feed .information {
+        padding-left: 13%!important;
+    }
+}
+
+@media screen and (max-width: 843px) {
+    .news-feed .row .image img{
+        height: 174px!important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .news-feed .information {
+        padding-left: 0!important;
+    }
+
+    .news-feed .row .image img{
+        height: 100%!important;
+        width: 100%!important;
+    }
+
+    .news-feed .row .image {
+        padding-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .news-feed .information {
+        padding-left: 0!important;
+    }
+}
+
+.news-feed .row .image{
+    padding-left: 0;
+}
+
+.news-feed .row .image img{
+    height: 150px;
+    width: 150px;
+}
+
+.news-feed .row .information{
+    padding-left: 3%;
+}
+
+.news-feed .row .information .title{
+    cursor: pointer;
+    margin: 0;
+    margin-bottom: 5px;
+    word-break: break-all;
+    text-align: justify;
+}
+
+.news-feed .row .information .title:hover{
+    text-decoration: underline;
+    color: rgba(0, 140, 255, 0.623);
+}
+
+.news-feed .row .information .desk{
+    margin-left: 16px;
+    padding: 0;
+    border-radius: 17px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+.news-feed .row .information .Technology{
+    background-color: tomato;
+}
+
+.news-feed .row .information .Science{
+    background-color: orange;
+}
+
+.news-feed .row .information .row-footer{
+    padding-top: 65px;
+    opacity: 0.4;
+}
+
+/*FOOTER*/
+.div-footer{
+    background-color: lightgray;
+    padding-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.div-footer .hide{
+    display: none;
+}
+
+
+.div-footer .right{
+    float: right;
+}
+
+.modal-header{
+    background-color: black;
+    color: white;
+}
+
+.modal-header .close{
+    color:white;
+    opacity: 50%;
+}
+
+.modal-header .close:hover{
+    opacity: 100%;
+}
+
+.modal-body .url {
+    word-break: break-all;
+    text-align: justify;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.modal-body .url:hover{
+    text-decoration: underline;
+}
+
+.modal-body .snippet{
+    text-align: justify;
+}
+
+/*LOAD SCREEN*/
+.spinner {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+  
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+  
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+  
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+  
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% { 
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}

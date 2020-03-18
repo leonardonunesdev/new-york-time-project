@@ -1,0 +1,58 @@
+<div class="header">
+  <h2>New York Times News Feed</h2>
+  <span>By Leonardo Nunes dos Santos</span>
+</div>
+
+<!--News Feed-->
+<div class="news-feed">
+  <div *ngFor="let news of newsArray" class="row">
+    <div class="image col-md-1">
+      <img *ngIf="news.multimedia.length > 0" src="https://www.nytimes.com/{{news.multimedia[0].url}}"/>
+      <img *ngIf="news.multimedia.length <= 0" src="https://prgbrasil.com/wp-content/themes/consultix/images/no-image-found-360x250.png"/>
+    </div>
+    <div class="information col-md-11">
+      <h4 class="title col-md-12"><a (click)="openModal(newsModal,news)">{{news.headline.main}}</a></h4>
+      <span class="desk col-md-12 {{news.news_desk}}">{{news.news_desk}}</span>
+      <div class="row-footer">
+        <span *ngIf="news.byline.original" class="original col-md-6">{{news.byline.original}}</span>
+        <span *ngIf="!news.byline.original" class="original col-md-6">By unknow</span>
+        <span class="pub-date col-md-6">{{news.pub_date | date: "dd/MM/yyyy"}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Next and Previous page button-->
+<div class="div-footer">
+  <span class="left" #pageInformation>Show 1 page of 200.</span>
+  <div class="btn-group btn-group-toggle right" data-toggle="buttons">
+    <button class="btn btn-outline-dark" (click)="controlNumPage('Previous')">Previous</button>
+    <button class="btn btn-outline-dark" (click)="controlNumPage('Next')">Next</button>
+  </div>
+</div>
+
+
+<!--News Modal-->
+<ng-template #newsModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="newsTitle">{{title}}</h5>
+    <button type="button" class="close" (click)="modal.dismiss()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="modal-body">
+    <div class="row">
+      <a href="{{url}}" target="_blank" class="url col-md-12">{{url}}</a>
+      <span class="snippet col-md-12">{{snippet}}</span>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #loadModal let-modal class="load-modal">
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</ng-template>
