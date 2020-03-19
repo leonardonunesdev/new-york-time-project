@@ -6,6 +6,8 @@ Software desenvolvido como teste para a vaga de emprego de front-end da empresa 
 
   * Baixado o node, será necessário navegar até a pasta ..\new-york-time-project\newYorkTimeProject.
 
+  * Dentro da pasta executar o comando "npm install" para baixar os packages do sistema, para ser possível executá-lo.
+ 
   * Dentro da pasta executar o comando "ng serve".
 
 * **Escolhas feitas dentro do projeto**
